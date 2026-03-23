@@ -1,0 +1,243 @@
+{
+  "generatedAt": "2026-03-23T23:13:39.934717+00:00",
+  "sources": {
+    "stackOverflow": "stack-overflow-developer-survey-2024.zip",
+    "brfss": "LLCP2024ASC.zip"
+  },
+  "stackOverflow": {
+    "relevant_columns": [
+      "Employment",
+      "RemoteWork",
+      "WorkExp",
+      "TimeSearching",
+      "TimeAnswering",
+      "Frustration",
+      "ProfessionalTech",
+      "JobSat",
+      "Frequency_1",
+      "Frequency_2",
+      "Frequency_3"
+    ],
+    "burnout_proxy_benchmarks": {
+      "job_satisfaction_score": {
+        "average": 6.94,
+        "median": 7.0,
+        "sample_size": 29126
+      },
+      "daily_time_searching_minutes": {
+        "average": 51.61,
+        "median": 45.0,
+        "sample_size": 28911
+      },
+      "daily_time_answering_minutes": {
+        "average": 40.31,
+        "median": 22.5,
+        "sample_size": 28844
+      },
+      "collaboration_friction_score": {
+        "average": 1.2,
+        "median": 1.0,
+        "sample_size": 28462
+      },
+      "derived_burnout_risk_index": {
+        "average": 31.76,
+        "median": 28.92,
+        "sample_size": 28137
+      },
+      "work_experience_years": {
+        "average": 11.47,
+        "median": 9.0,
+        "sample_size": 29658
+      }
+    },
+    "distribution_snapshots": {
+      "remote_work": [
+        {
+          "label": "Hybrid (some remote, some in-person)",
+          "count": 23015
+        },
+        {
+          "label": "Remote",
+          "count": 20831
+        },
+        {
+          "label": "In-person",
+          "count": 10960
+        }
+      ],
+      "employment": [
+        {
+          "label": "Employed, full-time",
+          "count": 45162
+        },
+        {
+          "label": "Independent contractor, freelancer, or self-employed",
+          "count": 10726
+        },
+        {
+          "label": "Student, full-time",
+          "count": 8626
+        },
+        {
+          "label": "Employed, part-time",
+          "count": 4145
+        },
+        {
+          "label": "Not employed, but looking for work",
+          "count": 3954
+        }
+      ],
+      "top_frustrations": [
+        {
+          "label": "Amount of technical debt",
+          "count": 17614
+        },
+        {
+          "label": "Complexity of tech stack for build",
+          "count": 9284
+        },
+        {
+          "label": "Complexity of tech stack for deployment",
+          "count": 9132
+        },
+        {
+          "label": "Reliability of tools/systems used in work",
+          "count": 8904
+        },
+        {
+          "label": "Tracking my work",
+          "count": 7652
+        }
+      ]
+    }
+  },
+  "brfss": {
+    "relevant_columns": [
+      "_STATE",
+      "PHYSHLTH",
+      "MENTHLTH",
+      "EMPLOY1",
+      "LSATISFY",
+      "EMTSUPRT",
+      "SDLONELY",
+      "SDHEMPLY",
+      "_AGE80",
+      "_SEX",
+      "_LLCPWT2"
+    ],
+    "sleep_benchmark_note": "The 2024 BRFSS combined layout available in this workspace did not expose a direct sleep-hours field in the processed spec, so this output includes wellbeing proxies that can support sleep-related benchmark context.",
+    "wellbeing_benchmarks": {
+      "days_mental_health_not_good": {
+        "average": 11.05,
+        "median": 7.0,
+        "sample_size": 179605
+      },
+      "days_physical_health_not_good": {
+        "average": 11.5,
+        "median": 6.0,
+        "sample_size": 179027
+      },
+      "emotional_support_score": {
+        "average": 4.13,
+        "median": 4.0,
+        "sample_size": 200624
+      },
+      "loneliness_score": {
+        "average": 2.0,
+        "median": 2.0,
+        "sample_size": 202133
+      },
+      "age": {
+        "average": 54.68,
+        "median": 57.0,
+        "sample_size": 449356
+      }
+    },
+    "distribution_snapshots": {
+      "life_satisfaction": [
+        {
+          "label": "Satisfied",
+          "count": 100151
+        },
+        {
+          "label": "Very satisfied",
+          "count": 90530
+        },
+        {
+          "label": "Dissatisfied",
+          "count": 8832
+        },
+        {
+          "label": "Very dissatisfied",
+          "count": 2445
+        }
+      ],
+      "employment_codes": [
+        {
+          "label": "1",
+          "count": 186378
+        },
+        {
+          "label": "2",
+          "count": 39146
+        },
+        {
+          "label": "5",
+          "count": 17832
+        },
+        {
+          "label": "6",
+          "count": 11473
+        },
+        {
+          "label": "4",
+          "count": 10812
+        }
+      ]
+    }
+  },
+  "dashboard": {
+    "burnoutRiskBenchmarks": {
+      "jobSatisfactionAverage": 6.94,
+      "searchTimeMinutesAverage": 51.61,
+      "answerTimeMinutesAverage": 40.31,
+      "collaborationFrictionAverage": 1.2,
+      "burnoutRiskIndexAverage": 31.76
+    },
+    "sleepAndRecoveryBenchmarks": {
+      "brfssMentalHealthDaysAverage": 11.05,
+      "brfssPhysicalHealthDaysAverage": 11.5,
+      "brfssEmotionalSupportAverage": 4.13,
+      "brfssLonelinessAverage": 2.0,
+      "note": "The 2024 BRFSS combined layout available in this workspace did not expose a direct sleep-hours field in the processed spec, so this output includes wellbeing proxies that can support sleep-related benchmark context."
+    },
+    "meta": {
+      "stackOverflowRelevantColumns": [
+        "Employment",
+        "RemoteWork",
+        "WorkExp",
+        "TimeSearching",
+        "TimeAnswering",
+        "Frustration",
+        "ProfessionalTech",
+        "JobSat",
+        "Frequency_1",
+        "Frequency_2",
+        "Frequency_3"
+      ],
+      "brfssRelevantColumns": [
+        "_STATE",
+        "PHYSHLTH",
+        "MENTHLTH",
+        "EMPLOY1",
+        "LSATISFY",
+        "EMTSUPRT",
+        "SDLONELY",
+        "SDHEMPLY",
+        "_AGE80",
+        "_SEX",
+        "_LLCPWT2"
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+If AI output contains any of these words:
+["diagnosed", "disorder", "depressed", "anxiety disorder", 
+"mentally ill", "burnout diagnosis"]
+→ Strip the word and replace with safe alternative
+→ Append professional support reminder
+
+If user input contains any of these signals:
+["I can't cope", "I give up", "I don't want to work anymore",
+"I'm falling apart", "I need help"]
+→ Immediately return empathy response
+→ Display EAP/crisis resource card
+→ Do not continue the wellness conversation
+
+If burnout risk score > 70:
+→ Always show the Heads Up Panel
+→ Always append professional support message to AI cards
+→ Disable any suggestions that increase workload
+

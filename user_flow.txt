@@ -1,0 +1,14 @@
+User logs in
+      ↓
+Connects their data sources
+(work calendar, on-call logs, or manual input)
+      ↓
+Dashboard loads their weekly pattern summary
+      ↓
+AI generates insight cards based on their data
+      ↓
+User clicks into any panel for deeper detail
+      ↓
+AI nudges healthy habits or flags risk patterns
+      ↓
+If distress signals detected → redirect to professional resources

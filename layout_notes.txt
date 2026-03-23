@@ -1,0 +1,23 @@
+┌─────────────────────────────────────────────┐
+│  Header: Weekly Wellbeing Dashboard          │
+│  [Week selector]  [Connect data source btn]  │
+├──────────────┬──────────────┬────────────────┤
+│ 🔴 Burnout   │ 🟠 On-Call   │ 🟢 Boundary    │
+│ Risk         │ Fatigue      │ Health         │
+│              │              │                │
+│ Score: 64/100│ Incidents: 4 │ Score: 72/100  │
+│ [Trend line] │ [Bar chart]  │ [Line chart]   │
+│              │ Avg: 2am     │ After-hrs: 38% │
+├──────────────┴──────────────┴────────────────┤
+│  🤖 AI Insight Cards                         │
+│  ┌──────────────────────────────────────┐    │
+│  │ 📊 Observation: Your after-hours     │    │
+│  │ activity increased 40% this week     │    │
+│  │ 💡 Suggestion: Try setting a hard    │    │
+│  │ stop time of 6pm 3 days this week    │    │
+│  └──────────────────────────────────────┘    │
+├─────────────────────────────────────────────┤
+│  ⚠️ Heads Up Panel (only shows if risk > 70) │
+│  "Your patterns suggest elevated risk —      │
+│  consider speaking with your EAP"            │
+└─────────────────────────────────────────────┘
