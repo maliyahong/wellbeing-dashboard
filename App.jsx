@@ -206,7 +206,7 @@ function buildAnthropicUserPrompt(week) {
 function SimplePanel({ title, tone, stat, detail, items }) {
   return (
     <section className={`panel-card ${tone}`}>
-     <span className={`panel-kicker ${tone}`}>
+    <span className={`panel-kicker ${tone}`}>
   {title}
   <span className={`risk-badge ${tone}`} style={{ marginLeft: 8 }}>
     {tone.toUpperCase()}
@@ -337,7 +337,7 @@ const showAlert = week.burnout.score >= 70;
         </div>
       </header>
 
-      {showAlert && (
+     {showAlert && (
   <div className="alert-banner">
     ⚠️ Burnout risk is high this week ({week.burnout.score}/100).
     Consider reviewing workload and recovery time.
@@ -346,7 +346,7 @@ const showAlert = week.burnout.score >= 70;
       
       <section className="panels-grid">
         
-       <SimplePanel
+   <SimplePanel
   title={`Burnout Risk Tracker (${burnoutRisk.label})`}
   tone={burnoutRisk.color}
   stat={`${week.burnout.score}/100`}
