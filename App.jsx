@@ -1,4 +1,9 @@
 import React, { useEffect, useMemo, useState } from "react";
+function getRiskLevel(score) {
+  if (score >= 70) return { label: "High", color: "red" };
+  if (score >= 55) return { label: "Moderate", color: "orange" };
+  return { label: "Low", color: "green" };
+}
 import InsightCard from "./InsightCard";
 import { checkGuardrails, EAP_RESOURCE_LINK } from "./guardrails";
 
@@ -199,7 +204,12 @@ function buildAnthropicUserPrompt(week) {
 function SimplePanel({ title, tone, stat, detail, items }) {
   return (
     <section className={`panel-card ${tone}`}>
-      <span className={`panel-kicker ${tone}`}>{title}</span>
+     <span className={`panel-kicker ${tone}`}>
+  {title}
+  <span className={`risk-badge ${tone}`} style={{ marginLeft: 8 }}>
+    {tone.toUpperCase()}
+  </span>
+</span>
       <div className="score-value" style={{ marginTop: 12 }}>{stat}</div>
       <p className="panel-subtitle">{detail}</p>
       <div className="panel-footer">
@@ -224,11 +234,15 @@ export default function App() {
   const [status, setStatus] = useState("Add an Anthropic API key to generate live insight cards, or use the fallback examples shown here.");
   const [isLoading, setIsLoading] = useState(false);
 
-  const week = useMemo(
+  </header(
     () => weeklyData.find((entry) => entry.id === selectedWeek) ?? weeklyData[0],
     [selectedWeek]
   );
+  
+const burnoutRisk = getRiskLevel(week.burnout.score);
 
+const showAlert = week.burnout.score >= 70;
+  
   useEffect(() => {
     setCards(fallbackInsightsForWeek(week));
   }, [week]);
@@ -321,14 +335,22 @@ export default function App() {
         </div>
       </header>
 
+      {showAlert && (
+  <div className="alert-banner">
+    ⚠️ Burnout risk is high this week ({week.burnout.score}/100).
+    Consider reviewing workload and recovery time.
+  </div>
+)}
+      
       <section className="panels-grid">
-        <SimplePanel
-          title="Burnout Risk Tracker"
-          tone="red"
-          stat={`${week.burnout.score}/100`}
-          detail={formatDelta(week.burnout.delta)}
-          items={week.burnout.insights}
-        />
+        
+       <SimplePanel
+  title={`Burnout Risk Tracker (${burnoutRisk.label})`}
+  tone={burnoutRisk.color}
+  stat={`${week.burnout.score}/100`}
+  detail={formatDelta(week.burnout.delta)}
+  items={week.burnout.insights}
+/>
         <SimplePanel
           title="On-Call Fatigue Log"
           tone="orange"
