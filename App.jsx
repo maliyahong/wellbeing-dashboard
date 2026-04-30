@@ -7,6 +7,8 @@ function getRiskLevel(score) {
 import InsightCard from "./InsightCard";
 import { checkGuardrails, EAP_RESOURCE_LINK } from "./guardrails";
 
+import "./App.css";
+
 const anthropicSystemPrompt = `You are a workplace wellbeing assistant for tech workers.
 Your role is to help users understand their work patterns
 and build healthier habits.
